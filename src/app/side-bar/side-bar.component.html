@@ -1,0 +1,89 @@
+
+
+<mat-sidenav-container>
+
+    <mat-sidenav mode="side" [(opened)]="isOpened">
+        <!-- <form class="form-inline waves-light" mdbWavesEffect >
+            <div class="md-form mt-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" #box> 
+                <button id="a1" (click)="getVal(box.value) ">Search</button>   
+            </div>
+        </form>  -->
+        <table>
+        <tr>
+            <td colspan="2"><input class="form-control mr-sm-2" type="text" placeholder="Search" #box [(ngModel)]="searchval"  /> </td>
+        </tr>
+        <br>
+        <tr>
+            <td><button type="button" class="btn btn-secondary btn-sm" type="button"(click)="handleClear()" >Clear</button> </td>
+           <td style="text-align: right"><button type="button" class="btn btn-primary btn-sm" id="a1" (click)="getVal(box.value) " >Search</button></td>
+        
+        
+         </tr>       
+        </table>
+        <br>
+        <ul>
+            <li>
+
+                <button id="component1" mat-icon-button (click)="comp1ToggleBtn()">
+                    <mat-icon>{{ comp1Toggle? 'indeterminate_check_box': 'add_box'}} </mat-icon>
+                    Functions
+                </button>
+                <div class="toggle" *ngIf="comp1Toggle ">
+                  <div id="circle"> Circle<app-circle></app-circle></div> 
+                  <div id="rectangle"> <app-rectangle></app-rectangle></div> 
+                  <div id="cast"> <app-cast></app-cast> </div>
+                  <div id="date"> <app-date></app-date> </div>
+                  <div id="if"> <app-if></app-if> </div>
+                </div>
+
+            </li>
+            <li>
+
+                <button id="component2" mat-icon-button (click)="comp2ToggleBtn()">
+                    <mat-icon>{{ comp2Toggle? 'indeterminate_check_box': 'add_box'}} </mat-icon>
+                    Views
+                </button>
+                <div class="toggle" *ngIf="comp2Toggle">
+                    <div id="order"> <app-order></app-order> </div>
+                    <div id="checkout"><app-checkout></app-checkout></div>
+                    <div id="confiramtion"><app-confirmation></app-confirmation></div>
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <button id="component3" mat-icon-button (click)="comp3ToggleBtn()">
+                    <mat-icon>{{ comp3Toggle? 'indeterminate_check_box': 'add_box'}} </mat-icon>
+                    Integrations
+                </button>
+                <div class="toggle" *ngIf="comp3Toggle">
+                    <div id="connectors"><app-connectors></app-connectors></div>
+                    <div id="email"><app-email></app-email></div>
+                    <div id="kfka"><app-kfka></app-kfka></div>
+                    <div id="mq"><app-mq></app-mq></div>
+                    <div id="sap"><app-sap></app-sap></div>
+                </div>
+
+            </li>
+
+
+        </ul>
+    </mat-sidenav>
+    <!-- <mat-drawer-content> 
+        <div class="row">
+
+            <div class="col-md-9">
+
+                <app-drag-and-drop (nodeClicked)='setSelectedNode($event)'></app-drag-and-drop>
+
+            </div>
+
+
+
+        </div>
+
+    </mat-drawer-content> -->
+</mat-sidenav-container>

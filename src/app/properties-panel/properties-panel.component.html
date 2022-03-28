@@ -1,0 +1,32 @@
+<!-- node properties-->
+<div class="row">
+    <div class="col-md-12">
+        <h4 align = "center">Node Attributes</h4>
+    </div>
+</div>
+<div *ngIf="selectedNode!= null"> 
+    <div class="row">
+        <div class="col-md-6">
+            Node Key :  
+        </div>
+        <div class="col-md-6">
+            <input class="form-control form-control-sm" id="key" value="{{selectedNode.key}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Node Location : 
+        </div>
+        <div class="col-md-6">
+            <input class="form-control form-control-sm" id="key" value="{{selectedNode.location}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Angle: 
+        </div>
+        <div class="col-md-6">
+            <input class="form-control form-control-sm" id="key" value="{{selectedNode.angle}}">
+        </div>
+    </div>
+</div>

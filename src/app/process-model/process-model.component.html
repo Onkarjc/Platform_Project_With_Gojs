@@ -1,0 +1,40 @@
+
+<nav class="navbar navbar-dark bg-primary">
+    <div class="navbar-brand text-white " id="nav" style="text-align: center;width: 100%;font-weight: bold;"> Process Modeling</div>
+</nav>
+<div class="row p-3 mb-2   ">
+    <div class="col-md-2">
+        <div
+            style="flex-grow: 1;width: 250px; height: 690px; border: solid 1px black; margin-top: 10px; margin-left: 10px;">
+            <app-side-bar></app-side-bar>
+        </div>
+
+    </div>
+    <div class="col-md-8">
+        <div style=" height: 690px;margin-left: 30px; border: solid 1px black; margin-top: 10px; ">
+            <app-drag-and-drop (nodeClicked)='setSelectedNode($event)'></app-drag-and-drop>
+        </div>
+
+    </div>
+    <div class="col-md-2"> 
+        <table>
+            <tr>
+                <td>
+                    <div style="flex-grow: 1; height: 345px; border: solid 1px black; margin-top: 10px;">
+
+                        <h4> Process Attribute</h4>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="flex-grow: 1; height: 345px; border: solid 1px black;  ">
+                        <app-properties-panel [selectedNode]='selectedNode'></app-properties-panel>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
